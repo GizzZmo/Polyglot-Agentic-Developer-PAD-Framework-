@@ -1,6 +1,15 @@
 from pad.api import app  # FastAPI-app for REST API
 from pad.orchestrator import OrchestratorAgent
 
+
+def main() -> None:
+    """
+    Oppstartspunkt for PAD-systemet.
+    """
+    orchestrator = OrchestratorAgent()
+    orchestrator.run()
+
+
 if __name__ == "__main__":
     import sys
     if "--api" in sys.argv:
