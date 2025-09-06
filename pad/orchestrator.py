@@ -17,6 +17,7 @@ Example:
     >>> orchestrator.run()
 """
 
+import logging
 from .codegen_agent import CodeGenAgent
 from .qa_agent import QualityAssuranceAgent
 from .context_agent import ContextAgent
