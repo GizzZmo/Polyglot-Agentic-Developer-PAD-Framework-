@@ -1,24 +1,17 @@
-"""
-context_agent.py
-Definerer Kunnskaps- og kontekst-agenten som holder oversikt over kodebasen og avhengigheter.
-"""
-
 class ContextAgent:
     """
-    Agent for å opprettholde intern modell av kodebasen og kontekst.
+    Opprettholder intern modell av kodebase og kontekst.
     """
-
     def __init__(self):
         self.context = "Standard kontekst"
+        self.code_history = []
 
     def get_context(self) -> str:
-        """
-        Returnerer nåværende kontekst for kodegenerering.
-        """
         return self.context
 
     def update_context(self, new_context: str):
-        """
-        Oppdaterer intern kontekst.
-        """
         self.context = new_context
+
+    def update_context_from_code(self, code: str):
+        self.code_history.append(code)
+        self.context = f"Seneste kodeblokk: {code[:40]}..."
