@@ -35,9 +35,10 @@ class UserInteractionAgent:
         >>> agent = UserInteractionAgent()
         >>> user_input = agent.get_input()  # Interactive, can't demo easily
         >>> agent.provide_feedback("Operation completed successfully!")
-    """
 
+    """
     def get_input(self) -> str:
+        
         """
         Leser inn brukerforespørsel fra konsoll.
 
@@ -81,4 +82,8 @@ class UserInteractionAgent:
             Alle meldinger prefixes med "[PAD]:" for å identifisere
             systemtilbakemelding klart for brukeren.
         """
+
         print(f"[PAD]: {message}")
+
+    def api_feedback(self, message: str):
+        return {"feedback": message}

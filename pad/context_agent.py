@@ -50,9 +50,12 @@ class ContextAgent:
         Setter opp grunnleggende kontekstuell tilstand som kan utvides
         og oppdateres etter hvert som agenten lærer mer om kodebasen.
         """
+
         self.context = "Standard kontekst"
+        self.code_history = []
 
     def get_context(self) -> str:
+
         """
         Returnerer nåværende kontekst for kodegenerering.
 
@@ -91,4 +94,9 @@ class ContextAgent:
             I en fullstendig implementasjon ville dette involvere sofistikert
             merging av ny kontekst med eksisterende kunnskap.
         """
+
         self.context = new_context
+
+    def update_context_from_code(self, code: str):
+        self.code_history.append(code)
+        self.context = f"Seneste kodeblokk: {code[:40]}..."

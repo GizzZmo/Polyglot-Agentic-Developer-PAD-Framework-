@@ -76,3 +76,4 @@ class CodeGenAgent:
         context = context_agent.get_context()
         return (f"# Generert kode for: {task_description}\n"
                 f"# Kontekst: {context}\nprint('Hei, verden!')")
+

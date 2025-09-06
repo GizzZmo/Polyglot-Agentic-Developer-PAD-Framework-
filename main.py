@@ -1,7 +1,4 @@
-"""
-main.py
-Starter PAD-systemet ved å initialisere og koordinere alle agentene.
-"""
+from pad.api import app  # FastAPI-app for REST API
 from pad.orchestrator import OrchestratorAgent
 
 
@@ -14,4 +11,10 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    if "--api" in sys.argv:
+        import uvicorn
+        uvicorn.run("pad.api:app", host="0.0.0.0", port=8000, reload=True)
+    else:
+        orchestrator = OrchestratorAgent()
+        orchestrator.run()
