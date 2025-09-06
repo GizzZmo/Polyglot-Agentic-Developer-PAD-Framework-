@@ -1,14 +1,6 @@
-# requirements.txt
-# Avhengigheter for PAD-rammeverket
-
-# Kjerne
-python-dotenv
-openai
-# API-rammeverk (valgfritt, for fremtidig utvidelse)
 fastapi
-flask
-
-# Testing og statisk analyse
+uvicorn
+pydantic
 pytest
-mypy
 flake8
+python-dotenv
