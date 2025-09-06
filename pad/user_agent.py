@@ -1,21 +1,12 @@
-"""
-user_agent.py
-Definerer Brukerinteraksjons-agenten som håndterer kommunikasjon med brukeren.
-"""
-
 class UserInteractionAgent:
     """
-    Agent for interaksjon med bruker: input og tilbakemelding.
+    Agent for interaksjon med bruker: støtter CLI og API.
     """
-
     def get_input(self) -> str:
-        """
-        Leser inn brukerforespørsel fra konsoll.
-        """
         return input("PAD > ")
 
     def provide_feedback(self, message: str):
-        """
-        Gir tilbakemelding til brukeren.
-        """
         print(f"[PAD]: {message}")
+
+    def api_feedback(self, message: str):
+        return {"feedback": message}
