@@ -139,6 +139,58 @@ Nye funksjoner er velkomne! Vennligst opprett en ny "issue" for å diskutere ide
 
 Dette prosjektet er lisensiert under MIT-lisensen. Se LICENSE-filen for detaljer.
 
+data:
+- name: README.md
+  description: Prosjektbeskrivelse og oversikt, allerede gitt.
+- name: main.py
+  description: Oppstartspunkt for PAD-systemet, starter orkestreringsagenten og koordinerer agentene.
+- name: requirements.txt
+  description: Liste over Python-avhengigheter (f.eks. fastapi, openai, pytest, mypy, flake8, etc.).
+- name: pad/
+  description: Katalog for all agentrelatert kode (hovedrammeverk).
+- name: pad/__init__.py
+  description: Gjør pad-mappen til et Python-pakke.
+- name: pad/orchestrator.py
+  description: Implementasjon av Planleggings- og orkestrerings-agenten.
+- name: pad/codegen_agent.py
+  description: Implementasjon av Kode-genererings-agenten.
+- name: pad/qa_agent.py
+  description: Implementasjon av Kvalitetssikrings-agenten (Quality Assurance Agent).
+- name: pad/context_agent.py
+  description: Implementasjon av Kunnskaps- og kontekst-agenten.
+- name: pad/user_agent.py
+  description: Implementasjon av Brukerinteraksjons-agenten.
+- name: pad/utils.py
+  description: Hjelpefunksjoner brukt av flere agenter.
+- name: pad/tests/
+  description: Mappe for tester.
+- name: pad/tests/test_orchestrator.py
+  description: Tester for orkestreringsagenten.
+- name: pad/tests/test_codegen_agent.py
+  description: Tester for kodegenereringsagenten.
+- name: pad/tests/test_qa_agent.py
+  description: Tester for QA-agenten.
+- name: pad/tests/test_context_agent.py
+  description: Tester for kontekstagenten.
+- name: pad/tests/test_user_agent.py
+  description: Tester for brukerinteraksjonsagenten.
+- name: .flake8
+  description: Konfigurasjon for flake8 kodeanalyse.
+- name: mypy.ini
+  description: Konfigurasjon for MyPy type-sjekking.
+- name: Dockerfile
+  description: Docker-oppsett for å kjøre PAD-systemet isolert.
+- name: LICENSE
+  description: MIT-lisensfil.
+- name: .gitignore
+  description: Ignorerer vanlige Python- og miljøfiler.
+- name: docs/
+  description: Mappe for ytterligere dokumentasjon og diagrammer (f.eks. mermaid-diagram).
+- name: docs/architecture.md
+  description: Teknisk utdypning av arkitektur og agentroller.
+- name: docs/mermaid_architecture.md
+  description: Mermaid-diagram som i README, i separat fil.
+
 ---
 
 **Utforsk videre:**  
